@@ -8,7 +8,12 @@ import Sidebar from '../components/Sidebar.svelte'
 <style>
     :global(body){
         background-color: #676778;
-        color: white;
+        /* color: white; */
+        background-color: #fafafa;
+        color: rgba(38, 38, 38, 0.7);
+        font-family: "Lato", sans-serif;
+        margin: 0;
+        padding: 0;
     }
 </style>
 
