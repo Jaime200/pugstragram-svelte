@@ -1,5 +1,11 @@
 <script>
 import Comments from './Comments.svelte'
+export let username;
+export let location;
+export let photo;
+export let postComment;
+export let comments;
+export let avatar;
 </script>
 
 
@@ -117,13 +123,14 @@ import Comments from './Comments.svelte'
   </style>
 
 
+
 <div class="Card">
     <div class="Card__container">
         <div class="Card__Header">
             <div class="Card__user">
-                <img src="https://arepa.s3.amazonaws.com/elmo002.jpg" alt="">
-                <h2>Elmo.pug
-                  <span>Bogota Colombia</span>
+                <img src={avatar} alt={username}>
+                <h2>{username}
+                  <span>{location}</span>
                 </h2>
                 
             </div>            
@@ -133,7 +140,7 @@ import Comments from './Comments.svelte'
         </div>
         <div class="Card__photo">
             <figure>
-                <img src="https://arepa.s3.amazonaws.com/elmo002.jpg" alt="">
+                <img src={photo} alt={username}>
             </figure>
         </div>   
         <div class="Card__icons">
@@ -147,10 +154,10 @@ import Comments from './Comments.svelte'
         </div>  
 
         <div class="Card__description">
-            <h3>elmo.pug</h3>
-            <span>Hola</span>            
+            <h3>{username}</h3>
+            <span>{postComment}</span>            
         </div>
-        <Comments/>
+        <Comments {comments}/>
           
     </div>
 </div>
