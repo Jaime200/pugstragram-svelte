@@ -1,5 +1,5 @@
 <script>
-
+import { likeCount } from '../store/store'
 </script>
 <style>
 
@@ -67,7 +67,7 @@ h1 {
             </div>
             <div class="Header__nav">
                 <ul>
-                    <li><i class="fas fa-heart"></i></li>
+                    <li><i class="fas fa-heart"></i> {$likeCount ===0 ?'': $likeCount}</li>
                     <li><i class="fas fa-user-alt"></i></li>
                 </ul>
             </div>
