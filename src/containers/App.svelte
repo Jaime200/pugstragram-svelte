@@ -6,8 +6,8 @@ import Sidebar from '../components/Sidebar.svelte'
 </script>
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+    @import url("https://fonts.googleapis.com/css?family=Pacifico&display=swap");
+  @import url("https://fonts.googleapis.com/css?family=Lato:300,400,600&display=swap");
     :global(body){
         background-color: #fafafa;
         color: rgba(38, 38, 38, 0.7);
