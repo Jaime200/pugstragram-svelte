@@ -1,5 +1,6 @@
 <script>
-
+export let nickname;
+export let name;
 </script>
 <style>
     .Profile__content {
@@ -32,8 +33,8 @@
             <img src="https://arepa.s3.amazonaws.com/oscar.png" alt="foto">
         </div>
         <div class="Profile__info">
-            <h2>Jaime</h2>
-            <span>Jaime Muñoz</span>
+            <h2>{nickname}</h2>
+            <span>{name}</span>
         </div>
     </div>
 </div>
