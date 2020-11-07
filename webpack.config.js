@@ -29,15 +29,16 @@ module.exports = {
         module : {
             rules : [
                 {
-                    test: /\.(sve;te|html)$/,
+                    test: /\.(svelte|html)$/,
                     use :{
-                        laoder :'svelte-loader'
+                        loader: 'svelte-loader',
+                        options : {
+                            dev,
+                            hydratable: true,
+                            hotReload: false
+                        }
                     },
-                    optons : {
-                        dev,
-                        hydratable: true,
-                        hotReload: false
-                    }
+                    
                 }
             ]
         },
@@ -56,7 +57,7 @@ module.exports = {
         output : config.server.output(),
         target : 'node',
         resolve :{ alias, extensions, mainFields},
-        external : Object.keys(pkg.dependencies).concat('encoding'),
+        externals : Object.keys(pkg.dependencies).concat('encoding'),
         module : {
             rules : [{
                 test : /\.(svelte|html)$/,
@@ -72,7 +73,7 @@ module.exports = {
         ]
         },
         mode: process.env.NODE_ENV,
-        performace: {
+        performance: {
           hints:false  
         }
     }
