@@ -62,9 +62,7 @@ function addComment(event){
       outline: none;
       cursor: pointer;
     }
-    label {
-      display: none;
-    }
+  
   </style>
 
 
