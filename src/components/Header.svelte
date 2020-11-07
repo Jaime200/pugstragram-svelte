@@ -1,5 +1,6 @@
 <script>
 import { likeCount } from '../store/store'
+export let segment;
 </script>
 <style>
 
@@ -58,6 +59,14 @@ h1 {
     top: 0;
     left: 0;
   }
+  [aria-current] i {
+    color : #bc1888
+  }
+
+  a {
+    color: rgba(38, 38, 38, 0.7);
+  }
+  
 </style>
 <header class="Header">
     <div class="Header__container">
@@ -68,7 +77,13 @@ h1 {
             <div class="Header__nav">
                 <ul>
                     <li><i class="fas fa-heart"></i> {$likeCount ===0 ?'': $likeCount}</li>
-                    <li><i class="fas fa-user-alt"></i></li>
+                    <li>
+                        <a aria-current={segment === 'profile' ? 'page' : undefined} 
+                            href="profile">
+                            <i class="fas fa-user-alt"></i>
+                        </a>
+                        
+                    </li>
                 </ul>
             </div>
         </div>
