@@ -21,7 +21,7 @@ onMount(async ()=>{
 </script>
 
 
-<Header />
+
 <Main>
   <TimeLine posts= {data.posts} />
   {#if data.user}
